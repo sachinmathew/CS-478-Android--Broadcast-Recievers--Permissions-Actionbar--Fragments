@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sachin.sdmp.com.app3">
+    <uses-permission android:name="edu.uic.cs478.f18.project3"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
+        <activity android:name=".Activity1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:label="myReceiver2"
+            android:enabled="true"
+            android:name="App3Reciever"
+            android:exported="true" >
+            <intent-filter android:priority="5">
+                <action android:name="sachin.sdmp.com.application1.SF.showToast"/>
+                <action android:name="sachin.sdmp.com.application1.NY.showToast"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+</manifest>

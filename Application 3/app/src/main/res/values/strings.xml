@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">App3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+      <string-array name="landmarks">
+        <item>Golden Gate Bridge</item>
+        <item>Fisherman's Wharf</item>
+        <item>Pier 39</item>
+        <item>San Francisco cable car system</item>
+        <item>Alcatraz Island</item>
+        <item>Union Square</item>
+    </string-array>
+    <string-array name="webpages">
+        <item>http://goldengatebridge.org/</item>
+        <item>http://www.fishermanswharf.org/</item>
+        <item>https://www.pier39.com/</item>
+        <item>https://www.sftodo.com/sanfrancisco/cable-car-san-francisco/</item>
+        <item>https://www.nps.gov/alca/index.htm</item>
+        <item>https://unionsquareshop.com/</item>
+    </string-array>
+</resources>

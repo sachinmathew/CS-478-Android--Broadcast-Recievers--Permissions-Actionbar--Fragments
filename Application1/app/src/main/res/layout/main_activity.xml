@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="143dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="1"
+        android:text="Click button below to send broadcast for NewYork" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="41dp"
+        android:layout_weight="1"
+        android:text="Click button below to send broadcast for San Fransisco " />
+
+    <Button
+        android:id="@+id/button_NY"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button_CA"
+        android:layout_marginEnd="47dp"
+        android:layout_weight="1"
+        android:text="New York" />
+
+    <Button
+        android:id="@+id/button_CA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="119dp"
+        android:layout_weight="1"
+        android:text="San Fransisco" />
+</RelativeLayout>
