@@ -14,13 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:elevation="4dp"/>
 
     </FrameLayout>
-
-
 
     <FrameLayout
         android:id="@+id/webpage_framelayout"

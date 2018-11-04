@@ -1,15 +1,18 @@
 package sachin.sdmp.com.app3;
 
+/*
+  Developed by Sachin Mathew
+  This the Activity2 class of Application2 which displays San Fransisco landmarks.
+ */
+
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.res.Configuration;
+import android.widget.LinearLayout;
 import android.os.Bundle;
+import android.content.res.Configuration;
+import android.widget.FrameLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-
-
 
 public class Activity2 extends AppCompatActivity
         implements LandmarksFragment.ListSelectionListener {
@@ -57,7 +60,6 @@ public class Activity2 extends AppCompatActivity
         fragmentManager
                 .addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
                     public void onBackStackChanged() {
-                        //Log.i("BACKSTACK", "onBackStackChanged");
                         configureLayout();
                     }
                 });
@@ -136,7 +138,6 @@ public class Activity2 extends AppCompatActivity
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
         // get fragment transaction
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         // replace LandmarkFragment with new instance with no item selected

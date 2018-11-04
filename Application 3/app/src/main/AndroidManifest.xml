@@ -27,7 +27,7 @@
             android:enabled="true"
             android:name="App3Reciever"
             android:exported="true" >
-            <intent-filter android:priority="5">
+            <intent-filter android:priority="1">
                 <action android:name="sachin.sdmp.com.application1.SF.showToast"/>
                 <action android:name="sachin.sdmp.com.application1.NY.showToast"/>
             </intent-filter>

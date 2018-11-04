@@ -4,6 +4,7 @@
         android:description="@string/TyrantWrath"
         android:label="tyrants will"
         android:protectionLevel="dangerous" />
+    <uses-permission android:name="edu.uic.cs478.f18.project3"></uses-permission>
        <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

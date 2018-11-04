@@ -1,5 +1,9 @@
 package sachin.sdmp.com.app3;
 
+/*
+  Developed by Sachin Mathew
+  This the MainActivity class of Application3.
+*/
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -22,6 +26,7 @@ public class Activity1 extends AppCompatActivity {
     public static Activity1 get() {
         return activity1;
     }
+
     //custom permission
     private String sachPermission="edu.uic.cs478.f18.project3";
 

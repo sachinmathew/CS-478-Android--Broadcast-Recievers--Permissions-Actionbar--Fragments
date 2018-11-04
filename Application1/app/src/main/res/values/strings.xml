@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Application1</string>
-    <string name="TyrantWrath">Allows application not to incur tyrants wrath.</string>
+    <string name="TyrantWrath">Allow Custom permission</string>
 </resources>

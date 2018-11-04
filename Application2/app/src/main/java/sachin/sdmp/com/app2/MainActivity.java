@@ -1,5 +1,10 @@
 package sachin.sdmp.com.app2;
 
+/*
+  Developed by Sachin Mathew
+  This the MainActivity class of Application2.
+*/
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
@@ -23,6 +28,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
         button =(Button)findViewById(R.id.buttonPermission);
+
+        // checks if permission is recieved from user on click of button
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,23 +38,28 @@ public class MainActivity extends Activity {
         });
         IntentFilter intentFilterSF = new IntentFilter();
         IntentFilter intentFilterNY = new IntentFilter();
+
+        //Setting up dynamic receivers
         intentFilterSF.addAction("sachin.sdmp.com.application1.SF.showToast");
         intentFilterNY.addAction("sachin.sdmp.com.application1.NY.showToast");
         intentFilterSF.setPriority(10);
         intentFilterNY.setPriority(15);
         sf = new RecieverSF();
         ny = new RecieverNY();
+
+        //registers receivers
         registerReceiver(sf,intentFilterSF);
         registerReceiver(ny,intentFilterNY);
 
     }
+    // checks if permission is recieved from user
     public void checkingPermission() {
         if(ContextCompat.checkSelfPermission(this, sachPermission)==PackageManager.PERMISSION_DENIED)
             ActivityCompat.requestPermissions(this, new String[]{sachPermission},0) ;
         else
             Toast.makeText(this, "Permission already present", Toast.LENGTH_LONG).show() ;
     }
-
+    //Unregisters receivers to prevent memory leakage
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -60,8 +72,8 @@ public class MainActivity extends Activity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-            // Permission granted, go ahead and display map
-            Log.i("BroadcastReceiver3 companion", "Ugo says: The user granted permission!!!") ;
+            // Permission granted
+            Log.i("BroadcastReceiver", "The user granted permission!!!") ;
         }
         else {
             Toast.makeText(this, "BUMMER: No Permission :-(", Toast.LENGTH_LONG).show() ;
